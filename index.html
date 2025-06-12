@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Muhammad Alim Kakani - Front-End Developer & UI Designer | Portfolio
+    </title>
+    <meta
+      name="title"
+      content="Muhammad Alim Kakani - Front-End Developer & UI Designer | Portfolio"
+    />
+    <meta
+      name="description"
+      content="Experienced front-end developer and UI designer from Aceh, Indonesia with 3+ years in web development. Specializing in React, JavaScript, Laravel, and healthcare applications. Available for freelance projects."
+    />
+    <meta
+      name="keywords"
+      content="Muhammad Alim Kakani, front-end developer, UI designer, web developer, JavaScript, React, Laravel, healthcare apps, Aceh developer, Indonesia, freelance developer"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Muhammad Alim Kakani" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://muhammadalimkakani.my.id" />
+    <meta
+      property="og:title"
+      content="Muhammad Alim Kakani - Front-End Developer & UI Designer"
+    />
+    <meta
+      property="og:description"
+      content="Experienced front-end developer and UI designer from Aceh, Indonesia. Specializing in React, JavaScript, and healthcare applications. View my portfolio and get in touch."
+    />
+    <meta
+      property="og:image"
+      content="https://muhammadalimkakani.my.id/public/image/alim_1.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://muhammadalimkakani.my.id/" />
+    <meta
+      property="twitter:title"
+      content="Muhammad Alim Kakani - Front-End Developer & UI Designer"
+    />
+    <meta
+      property="twitter:description"
+      content="Front-end developer and UI designer from Aceh, Indonesia. Specializing in React, JavaScript, and healthcare applications."
+    />
+    <meta
+      property="twitter:image"
+      content="https://muhammadalimkakani.my.id/public/image/alim_1.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://muhammadalimkakani.my.id/" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./public/image/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./public/image/favicon.ico"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="public/style/style.css" as="style" />
+    <link rel="preload" href="public/js/index.js" as="script" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Alim Kakani",
+        "url": "https://muhammadalimkakani.my.id",
+        "image": "https://muhammadalimkakani.my.id/public/image/alim_1.png",
+        "jobTitle": "Front-End Developer & UI Designer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "DKM IT Support & Freelance"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Aceh, Medan",
+          "addressRegion": "North Sumatra",
+          "addressCountry": "Indonesia"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/alim-kakani-958284226/",
+          "https://github.com/KakaniEmpires10",
+          "https://www.instagram.com/alim_kakani"
+        ],
+        "knowsAbout": [
+          "Front-End Development",
+          "UI Design",
+          "JavaScript",
+          "React",
+          "Vue.js",
+          "Laravel",
+          "PHP",
+          "HTML",
+          "CSS",
+          "Healthcare Applications",
+          "Hospital Management Systems"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Universitas Syiah Kuala",
+          "sameAs": "https://unsyiah.ac.id"
+        }
+      }
+    </script>
+
+    <!-- icon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="public/style/style.css" />
+
+    <!-- js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <script defer src="public/js/tabs.js"></script>
+    <script defer src="public/js/index.js"></script>
+  </head>
+  <body>
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <header role="banner">
+      <nav class="container" role="navigation" aria-label="Main navigation">
+        <div class="logo"><i class="fa-solid fa-microchip"></i>Alim</div>
+        <ul class="nav-links">
+          <li><a href="#home" aria-label="Go to home section">home</a></li>
+          <li><a href="#about" aria-label="Learn about me">about</a></li>
+          <li><a href="#skills" aria-label="View my skills">skills</a></li>
+          <li>
+            <a href="#works" aria-label="See my portfolio works">works</a>
+          </li>
+          <li><a href="#contact" aria-label="Contact me">contact</a></li>
+          <!-- <li><a href="/blog">blog</a></li> -->
+        </ul>
+        <div class="controls">
+          <div class="color-picker">
+            <div
+              class="color-option color-1 active"
+              data-primary="hsl(198.4, 93.2%, 59.6%)"
+              data-secondary="hsl(142.1, 70.6%, 45.3%)"
+              data-third="hsl(349.7, 89.2%, 60.2%)"
+              aria-label="Blue color theme"
+            ></div>
+            <div
+              class="color-option color-2"
+              data-primary="hsl(142.1, 70.6%, 45.3%)"
+              data-secondary="hsl(198.4, 93.2%, 59.6%)"
+              data-third="hsl(349.7, 89.2%, 60.2%)"
+              aria-label="Green color theme"
+            ></div>
+            <div
+              class="color-option color-3"
+              data-primary="hsl(349.7, 89.2%, 60.2%)"
+              data-secondary="hsl(198.4, 93.2%, 59.6%)"
+              data-third="hsl(142.1, 70.6%, 45.3%)"
+              aria-label="Red color theme"
+            ></div>
+          </div>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark/light theme"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section class="hero" id="home" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 id="hero-heading">
+                Hai, I am <br />
+                Muhammad Alim Kakani
+              </h1>
+              <p class="subtitle">Front-end Developer & UI Designer</p>
+              <!-- <button class="cta-button">
+                <span>My Project</span>
+                <i class="fas fa-arrow-right"></i>
+              </button> -->
+            </div>
+            <div class="hero-image">
+              <div class="profile-pic">
+                <img
+                  src="/public/image/alim_1.png"
+                  alt="Muhammad Alim Kakani - Front-end Developer and UI Designer from Medan, Indonesia"
+                />
+              </div>
+              <div class="floating-card card-1">
+                <div class="btn-docs-container">
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                </div>
+                <div class="docs-line" style="height: 30px"></div>
+                <div class="docs-line"></div>
+                <div class="docs-line"></div>
+              </div>
+              <div class="floating-card card-2">
+                <div class="btn-docs-container">
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                </div>
+                <div class="docs-line-tab">
+                  <div class="docs-line"></div>
+                  <div class="docs-line"></div>
+                  <div class="docs-line"></div>
+                </div>
+                <div class="docs-line" style="height: 50px"></div>
+              </div>
+              <div class="floating-card card-3">
+                <div class="btn-docs-container">
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                  <div class="btn-docs"></div>
+                </div>
+                <div class="docs-line" style="width: 155px"></div>
+                <div class="docs-line-dashboard">
+                  <div class="docs-line"></div>
+                  <div class="docs-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <h2 class="section-title" id="about-heading">ABOUT ME</h2>
+
+          <div class="about-tabs">
+            <!-- Tablist -->
+            <div
+              class="tab-list"
+              role="tablist"
+              aria-label="About me information"
+            >
+              <button
+                class="tab-button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="who-am-i-panel"
+                id="who-am-i-tab"
+                tabindex="0"
+              >
+                Who Am I?
+              </button>
+              <button
+                class="tab-button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="experience-panel"
+                id="experience-tab"
+                tabindex="-1"
+              >
+                Experience
+              </button>
+              <button
+                class="tab-button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="hobbies-panel"
+                id="hobbies-tab"
+                tabindex="-1"
+              >
+                Hobbies
+              </button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="who-am-i-panel"
+              aria-labelledby="who-am-i-tab"
+              aria-hidden="false"
+              tabindex="0"
+            >
+              <div class="tab-content">
+                <h3>Who Am I?</h3>
+                <p>
+                  I'm a passionate front-end developer and UI designer who
+                  discovered my calling through an unconventional path. While I
+                  initially studied nursing, my heart led me to web development.
+                  Currently working in IT Support at a healthcare management
+                  company, I've had the opportunity to expand into development
+                  work over the past 3 years—contributing to full-stack
+                  features, UI improvements, quality testing, and user
+                  experience enhancements based on real client feedback.
+                </p>
+                <p>
+                  This hands-on experience, combined with my freelance projects,
+                  has given me a unique perspective on building user-focused
+                  solutions that actually solve problems. I specialize in
+                  creating interfaces that are both visually appealing and
+                  highly functional, always keeping the end user's needs at the
+                  center of the design process.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="experience-panel"
+              aria-labelledby="experience-tab"
+              aria-hidden="true"
+              tabindex="0"
+            >
+              <div class="tab-content">
+                <h3>Professional Experience</h3>
+                <ul class="experience-list">
+                  <li class="experience-item">
+                    <h4>DKM IT Support & Developer</h4>
+                    <div class="experience-period">2022 - Present</div>
+                    <p>
+                      Healthcare management company - Contributing to full-stack
+                      development, UI improvements, and user experience
+                      enhancements based on client feedback.
+                    </p>
+                  </li>
+                  <li class="experience-item">
+                    <h4>Freelance Web Developer</h4>
+                    <div class="experience-period">2022 - Present</div>
+                    <p>
+                      Developing custom websites and web applications for
+                      various clients, specializing in front-end development and
+                      UI design.
+                    </p>
+                  </li>
+                  <li class="experience-item">
+                    <h4>OIA USK IT Support</h4>
+                    <div class="experience-period">July - November 2022</div>
+                    <p>
+                      Intern in OIA (Office of International Affairs) USK with
+                      responsibility to Manage OIA Website
+                    </p>
+                  </li>
+                  <li class="experience-item">
+                    <h4>Nursing Student</h4>
+                    <div class="experience-period">2020 - 2025</div>
+                    <p>
+                      Bachelor's degree in Nursing - Developed strong
+                      problem-solving skills and attention to detail that
+                      translate well to development work.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="hobbies-panel"
+              aria-labelledby="hobbies-tab"
+              aria-hidden="true"
+              tabindex="0"
+            >
+              <div class="tab-content">
+                <h3>What I Love Doing</h3>
+                <div class="hobbies-grid">
+                  <div class="hobby-item">
+                    <div class="hobby-icon">💻</div>
+                    <h4>Coding</h4>
+                    <p>Exploring new technologies and building side projects</p>
+                  </div>
+                  <div class="hobby-item">
+                    <div class="hobby-icon">🎨</div>
+                    <h4>UI Design</h4>
+                    <p>Creating beautiful and functional user interfaces</p>
+                  </div>
+                  <div class="hobby-item">
+                    <div class="hobby-icon">📚</div>
+                    <h4>Learning</h4>
+                    <p>
+                      Continuously improving skills through courses and
+                      tutorials
+                    </p>
+                  </div>
+                  <div class="hobby-item">
+                    <div class="hobby-icon">🎮</div>
+                    <h4>Gaming</h4>
+                    <p>Enjoying strategic and creative games in my free time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <h2 class="section-title" id="skills-heading">MY SKILLS</h2>
+          <div class="skill-container">
+            <div class="experience-card">
+              <img
+                src="/public/image/alim_2.png"
+                alt="Muhammad Alim Kakani professional photo"
+              />
+              <div class="experience-number" id="experienceCounter">3</div>
+              <div>Years<br />Working<br />Experience</div>
+            </div>
+
+            <!-- Desktop/Tablet Grid -->
+            <div class="skills-grid">
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/html-logo.png"
+                  alt="HTML5 programming language logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/css-logo.webp"
+                  alt="CSS3 styling language logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/js-logo.webp"
+                  alt="JavaScript programming language logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/node-logo.png"
+                  alt="Node.js runtime environment logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/react-logo.webp"
+                  alt="React JavaScript library logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/next-logo.png"
+                  alt="Next.js React framework logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/vue-logo.png"
+                  alt="Vue.js JavaScript framework logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/php-logo.png"
+                  alt="PHP programming language logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/ci-logo.webp"
+                  alt="CodeIgniter PHP framework logo"
+                />
+              </div>
+              <div class="skill-card">
+                <img
+                  src="/public/image/logos/laravel-logo.png"
+                  alt="Laravel PHP framework logo"
+                />
+              </div>
+            </div>
+
+            <!-- Mobile Carousel -->
+            <div class="skills-carousel swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/html-logo.png"
+                      alt="HTML5 logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/css-logo.webp"
+                      alt="CSS3 logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/js-logo.webp"
+                      alt="JavaScript logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/node-logo.png"
+                      alt="Node.js logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/react-logo.webp"
+                      alt="React logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/next-logo.png"
+                      alt="Next.js logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/vue-logo.png"
+                      alt="Vue.js logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/nuxt-logo.png"
+                      alt="Nuxt.js logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/ci-logo.webp"
+                      alt="CodeIgniter logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="skill-card">
+                    <img
+                      src="/public/image/logos/laravel-logo.png"
+                      alt="Laravel logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Add pagination if needed -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="additional-skills"
+        id="additional-skills"
+        aria-labelledby="additional-skills-heading"
+      >
+        <div class="container">
+          <h2 class="section-title" id="additional-skills-heading">
+            ADDITIONAL SKILLS
+          </h2>
+          <div class="skill-badges">
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/wordpress-logo.png"
+                alt="WordPress CMS logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/mysql-logo.png"
+                alt="MySQL database logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/bootstrap_logo.png"
+                alt="Bootstrap CSS framework logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/tailwind-logo.png"
+                alt="Tailwind CSS framework logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                style="border-radius: 10px"
+                src="/public/image/logos/shadcn-logo.png"
+                alt="shadcn/ui component library logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/prisma-logo.webp"
+                alt="Prisma ORM logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                style="border-radius: 10px"
+                src="/public/image/logos/drizzle-logo.png"
+                alt="Drizzle ORM logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/figma-logo.webp"
+                alt="Figma design tool logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/photoshop-logo.png"
+                alt="Adobe Photoshop logo"
+              />
+            </div>
+            <div class="skill-badge">
+              <img
+                src="/public/image/logos/canva-logo.png"
+                alt="Canva design tool logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works" id="works" aria-labelledby="works-heading">
+        <div class="container">
+          <h2 class="section-title" id="works-heading">
+            THE WORKS<br />
+            CLOSEST TO MY HEART
+          </h2>
+
+          <div class="accordion">
+            <article class="accordion-panel">
+              <h3 id="panel1-heading">
+                <button
+                  class="accordion-trigger"
+                  aria-controls="panel1-content"
+                  aria-expanded="true"
+                >
+                  <span class="accordion-title" id="panel1-title"
+                    >Registration App</span
+                  >
+                  <i class="fa-solid fa-fire-flame-curved accordion-icon"></i>
+                </button>
+              </h3>
+
+              <div
+                class="accordion-content"
+                id="panel1-content"
+                aria-labelledby="panel1-heading"
+                aria-hidden="false"
+                role="region"
+              >
+                <p>
+                  A hospital registration app that streamlines patient
+                  registration, appointment management, and record keeping.
+                  Designed for ease of use and security, it integrates with
+                  hospital systems to improve workflow.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="/public/image/works/app-registrasi.png"
+                  alt="Hospital Integrated Registration App interface showing patient registration form and dashboard"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="accordion-panel">
+              <h3 id="panel2-title">
+                <button
+                  class="accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="panel2-content"
+                >
+                  <span class="accordion-title">Paperless Hospital</span>
+
+                  <i class="fa-brands fa-laravel accordion-icon"></i>
+                </button>
+              </h3>
+
+              <div
+                role="region"
+                aria-labelledby="panel2-title"
+                aria-hidden="true"
+                class="accordion-content"
+                id="panel2-content"
+              >
+                <p>
+                  An integrated Hospital Information System designed to manage
+                  patient data, medical records, billing, and administrative
+                  workflows. This system streamlines hospital operations by
+                  connecting departments, improving data accuracy, and enabling
+                  efficient patient care through centralized access to
+                  information.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="public/image/works/simrs.png"
+                  alt="Hospital Information System Web Application dashboard showing patient management interface"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="accordion-panel">
+              <h3 id="panel3-title">
+                <button
+                  class="accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="panel3-content"
+                >
+                  <span class="accordion-title">Gen-A</span>
+
+                  <i class="fa-brands fa-react accordion-icon"></i>
+                </button>
+              </h3>
+
+              <div
+                role="region"
+                aria-labelledby="panel3-title"
+                aria-hidden="true"
+                class="accordion-content"
+                id="panel3-content"
+              >
+                <p>
+                  Organization management platform for GEN-A, an NGO focused on
+                  youth development in Aceh. Features admin dashboard and public
+                  landing page.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="public/image/works/gen-a.jpeg"
+                  alt="GEN-A organization management platform homepage and admin dashboard"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="accordion-panel">
+              <h3 id="panel4-title">
+                <button
+                  class="accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="panel4-content"
+                >
+                  <span class="accordion-title">USK Nursing</span>
+
+                  <i class="fa-brands fa-wordpress accordion-icon"></i>
+                </button>
+              </h3>
+
+              <div
+                role="region"
+                aria-labelledby="panel4-title"
+                aria-hidden="true"
+                class="accordion-content"
+                id="panel4-content"
+              >
+                <p>
+                  Collaborated on WordPress-based academic website development
+                  for USK's Bachelor of Nursing program, building custom pages
+                  and improving site functionality.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="/public/image/works/skep-web.png"
+                  alt="USK Nursing Faculty Website homepage showing academic programs and information"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="accordion-panel">
+              <h3 id="panel5-title">
+                <button
+                  class="accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="panel5-content"
+                >
+                  <span class="accordion-title">TBCare</span>
+
+                  <i
+                    class="fa-brands fa-react accordion-icon accordion-icon"
+                  ></i>
+                </button>
+              </h3>
+
+              <div
+                role="region"
+                aria-labelledby="panel5-title"
+                aria-hidden="true"
+                class="accordion-content"
+                id="panel5-content"
+              >
+                <p>
+                  Developed TB awareness website for graduate research project,
+                  providing comprehensive tuberculosis education and prevention
+                  information for Indonesian audiences.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="/public/image/works/tbcare.jpeg"
+                  alt="TBCare tuberculosis awareness website homepage with educational content"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="accordion-panel">
+              <h3 id="panel6-title">
+                <button
+                  class="accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="panel6-content"
+                >
+                  <span class="accordion-title">Paperless Web</span>
+
+                  <i class="fa-solid fa-code accordion-icon"></i>
+                </button>
+              </h3>
+
+              <div
+                role="region"
+                aria-labelledby="panel6-title"
+                aria-hidden="true"
+                class="accordion-content"
+                id="panel6-content"
+              >
+                <p>
+                  Frontend redesign prototype for healthcare AI company website,
+                  featuring improved user interface and responsive design. Built
+                  with vanilla JavaScript as foundation for future Nuxt.js
+                  implementation with role-based authentication.
+                </p>
+                <img
+                  class="accordion-image"
+                  src="/public/image/works/paperless-proto.jpeg"
+                  alt="PaperlessHospital website redesign homepage showing modern UI and healthcare AI features"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="container">
+        <h2 class="section-title">LET'S CONNECT</h2>
+        <div class="footer-card">
+          <img src="/public/image/alim_4.png" alt="Contact Smile Img">
+        </div>
+        <div class="social-links">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/alim-kakani-958284226/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a target="_blank" href="https://github.com/KakaniEmpires10"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/alim_kakani?igsh=MTN3ZmxkeW5mbnd2eg=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a target="_blank" href="mailto:muhammadalimkakani@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p>
+          &copy; <span id="year"></span> Muhammad Alim Kakani. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

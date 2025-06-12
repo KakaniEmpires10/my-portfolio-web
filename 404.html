@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Muhammad Ali Mkakani</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+
+        :root {
+            /* Your portfolio color variables */
+            --primary: hsl(198.4, 93.2%, 59.6%);
+            --secondary: hsl(142.1, 70.6%, 45.3%);
+            --third: hsl(349.7, 89.2%, 60.2%);
+            --bg-primary: #0a0a0f;
+            --bg-secondary: color-mix(in srgb, var(--primary) 10%, transparent);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+
+            /* Spacing Variables */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+
+            /* Border Radius Variables */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-2xl: 24px;
+            --radius-full: 50%;
+
+            /* Font Size Variables */
+            --text-sm: 14px;
+            --text-base: 16px;
+            --text-lg: 18px;
+            --text-xl: 20px;
+            --text-2xl: 24px;
+            --text-4xl: 36px;
+            --text-5xl: 48px;
+            --text-6xl: 56px;
+        }
+
+        /* Fallback for browsers that don't support color-mix */
+        @supports not (background: color-mix(in srgb, red, blue)) {
+            :root {
+                --bg-secondary: hsla(198.4, 93.2%, 59.6%, 0.1);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "JetBrains Mono", monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background gradient like your hero section */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(
+                circle at 20% 70%,
+                var(--primary) 0%,
+                transparent 20%
+            ),
+            radial-gradient(circle at 80% 40%, var(--third) 0%, transparent 20%);
+            z-index: -2;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: var(--spacing-xl);
+            position: relative;
+            z-index: 2;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            backdrop-filter: blur(20px);
+        }
+
+        .error-code {
+            font-size: var(--text-6xl);
+            font-weight: bold;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { 
+                text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+                color: var(--primary);
+            }
+            to { 
+                text-shadow: 0 0 30px rgba(0, 200, 255, 0.6);
+                color: var(--secondary);
+            }
+        }
+
+        .error-message {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .error-description {
+            font-size: var(--text-lg);
+            margin-bottom: var(--spacing-xl);
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-2xl);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: var(--text-base);
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: floatVertical 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: -2s;
+            background: var(--secondary);
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -4s;
+            background: var(--third);
+        }
+
+        @keyframes floatVertical {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-box {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            font-family: inherit;
+            min-width: 300px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .search-box::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Particles effect like your portfolio */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--spacing-md);
+                margin: var(--spacing-md);
+            }
+
+            .error-code {
+                font-size: var(--text-5xl);
+            }
+
+            .error-message {
+                font-size: var(--text-xl);
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .search-box {
+                min-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Oops! Page Not Found</h1>
+        <p class="error-description">
+            The page you're looking for doesn't exist or has been moved. 
+            Don't worry, let's get you back on track!
+        </p>
+
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">🏠 Go Home</a>
+            <a href="/blog" class="btn btn-secondary">📝 Visit Blog</a>
+            <button onclick="history.back()" class="btn btn-secondary">⬅️ Go Back</button>
+        </div>
+
+        <!-- <div class="search-container">
+            <input type="text" class="search-box" placeholder="🔍 Search for something..." id="searchBox">
+        </div> -->
+    </div>
+
+    <script>
+        // Particle background effect (matching your portfolio)
+        function createParticles() {
+            const body = document.body;
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement("div");
+                particle.className = "particle";
+                particle.style.opacity = Math.random() * 0.5;
+                particle.style.left = Math.random() * 100 + "%";
+                particle.style.top = Math.random() * 100 + "%";
+                particle.style.animation = `floatVertical ${
+                    3 + Math.random() * 4
+                }s ease-in-out infinite`;
+                particle.style.animationDelay = Math.random() * 2 + "s";
+                body.appendChild(particle);
+            }
+        }
+
+        // Add some interactivity to search
+        // document.getElementById('searchBox').addEventListener('keypress', function(e) {
+        //     if (e.key === 'Enter') {
+        //         const query = this.value.trim();
+        //         if (query) {
+        //             // Redirect to home with search parameter
+        //             window.location.href = `/?search=${encodeURIComponent(query)}`;
+        //         }
+        //     }
+        // });
+
+        // Mouse interaction with particles (matching your portfolio effect)
+        document.addEventListener('mousemove', function(e) {
+            const shapes = document.querySelectorAll('.shape');
+            const particles = document.querySelectorAll('.particle');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.3;
+                const x = mouseX * speed * 5;
+                const y = mouseY * speed * 5;
+                shape.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+
+            // Add subtle particle movement
+            particles.forEach((particle, index) => {
+                if (index % 5 === 0) { // Only move every 5th particle for performance
+                    const speed = 0.1;
+                    const x = mouseX * speed * 2;
+                    const y = mouseY * speed * 2;
+                    particle.style.transform = `translate(${x}px, ${y}px)`;
+                }
+            });
+        });
+
+        // Color theme cycling (matching your portfolio color system)
+        let colorIndex = 0;
+        const colors = [
+            { primary: 'hsl(198.4, 93.2%, 59.6%)', secondary: 'hsl(142.1, 70.6%, 45.3%)', third: 'hsl(349.7, 89.2%, 60.2%)' },
+            { primary: 'hsl(142.1, 70.6%, 45.3%)', secondary: 'hsl(349.7, 89.2%, 60.2%)', third: 'hsl(198.4, 93.2%, 59.6%)' },
+            { primary: 'hsl(349.7, 89.2%, 60.2%)', secondary: 'hsl(198.4, 93.2%, 59.6%)', third: 'hsl(142.1, 70.6%, 45.3%)' }
+        ];
+
+        function cycleColors() {
+            colorIndex = (colorIndex + 1) % colors.length;
+            const root = document.documentElement;
+            root.style.setProperty('--primary', colors[colorIndex].primary);
+            root.style.setProperty('--secondary', colors[colorIndex].secondary);
+            root.style.setProperty('--third', colors[colorIndex].third);
+        }
+
+        // Auto-cycle colors every 5 seconds
+        setInterval(cycleColors, 5000);
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+    </script>
+</body>
+</html>

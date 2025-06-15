@@ -1057,6 +1057,10 @@ footer {
     z-index: -1;
     border-radius: 100vw;
   }
+  
+  .blog-cards {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {

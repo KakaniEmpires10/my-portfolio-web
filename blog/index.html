@@ -1,11 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-</head>
-<body>
-    <h1>blog</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Blog - Muhammad Alim Kakani | Front-End Developer & UI Designer
+    </title>
+    <meta
+      name="title"
+      content="Blog - Muhammad Alim Kakani | Front-End Developer & UI Designer"
+    />
+    <meta
+      name="description"
+      content="Read the latest blog posts by Muhammad Alim Kakani, a front-end developer and UI designer from Aceh, Indonesia. Topics include web development, JavaScript, React, Laravel, and more."
+    />
+    <meta
+      name="keywords"
+      content="Muhammad Alim Kakani, blog, web development, front-end, UI design, JavaScript, React, Laravel, Aceh developer, Indonesia, programming articles"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Muhammad Alim Kakani" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alimfrontend.my.id/blog" />
+    <meta
+      property="og:title"
+      content="Blog - Muhammad Alim Kakani | Front-End Developer & UI Designer"
+    />
+    <meta
+      property="og:description"
+      content="Explore blog posts by Muhammad Alim Kakani on web development, JavaScript, React, Laravel, and UI design."
+    />
+    <meta
+      property="og:image"
+      content="https://alimfrontend.my.id/public/image/alim_1.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://alimfrontend.my.id/blog" />
+    <meta
+      property="twitter:title"
+      content="Blog - Muhammad Alim Kakani | Front-End Developer & UI Designer"
+    />
+    <meta
+      property="twitter:description"
+      content="Read blog articles by Muhammad Alim Kakani about web development, JavaScript, React, Laravel, and UI design."
+    />
+    <meta
+      property="twitter:image"
+      content="https://alimfrontend.my.id/public/image/alim_1.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alimfrontend.my.id/blog" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../public/image/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/image/favicon.ico"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../public/style/style.css" as="style" />
+    <link rel="preload" href="../public/js/main.js" as="script" />
+    <link rel="preload" href="../public/js/blog.js" as="script" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog - Muhammad Alim Kakani",
+        "url": "https://alimfrontend.my.id/blog",
+        "description": "Blog posts by Muhammad Alim Kakani on web development, JavaScript, React, Laravel, and UI design.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Muhammad Alim Kakani",
+          "url": "https://alimfrontend.my.id",
+          "image": "https://alimfrontend.my.id/public/image/alim_1.png"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Muhammad Alim Kakani",
+          "sameAs": [
+            "https://www.linkedin.com/in/alim-kakani-958284226/",
+            "https://github.com/KakaniEmpires10",
+            "https://www.instagram.com/alim_kakani"
+          ]
+        }
+      }
+    </script>
+
+    <!-- icon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../public/style/style.css" />
+
+    <!-- js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <script defer src="../public/js/main.js"></script>
+    <script defer src="../public/js/blog.js"></script>
+  </head>
+  <body>
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <header role="banner">
+      <nav class="container" role="navigation" aria-label="Main navigation">
+        <div class="logo"><i class="fa-solid fa-microchip"></i>Alim</div>
+        <ul class="nav-links">
+          <li><a href="/#home" aria-label="Go to home section">home</a></li>
+          <li><a href="/#about" aria-label="Learn about me">about</a></li>
+          <li><a href="/#skills" aria-label="View my skills">skills</a></li>
+          <li>
+            <a href="/#works" aria-label="See my portfolio works">works</a>
+          </li>
+          <li><a href="/#contact" aria-label="Contact me">contact</a></li>
+          <li><a href="/blog">blog</a></li>
+        </ul>
+        <div class="controls">
+          <div class="color-picker">
+            <div
+              class="color-option color-1 active"
+              data-primary="hsl(198.4, 93.2%, 59.6%)"
+              data-secondary="hsl(142.1, 70.6%, 45.3%)"
+              data-third="hsl(349.7, 89.2%, 60.2%)"
+              aria-label="Blue color theme"
+            ></div>
+            <div
+              class="color-option color-2"
+              data-primary="hsl(142.1, 70.6%, 45.3%)"
+              data-secondary="hsl(198.4, 93.2%, 59.6%)"
+              data-third="hsl(349.7, 89.2%, 60.2%)"
+              aria-label="Green color theme"
+            ></div>
+            <div
+              class="color-option color-3"
+              data-primary="hsl(349.7, 89.2%, 60.2%)"
+              data-secondary="hsl(198.4, 93.2%, 59.6%)"
+              data-third="hsl(142.1, 70.6%, 45.3%)"
+              aria-label="Red color theme"
+            ></div>
+          </div>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark/light theme"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main role="main">/
+      <section class="blog particles" id="blogs" aria-labelledby="blog-heading">
+        <div class="container">
+          <div class="blog-content">
+            <div class="blog-text">
+              <h1 id="blog-heading">
+                Blogs
+              </h1>
+              <p class="subtitle">List of my Blogs</p>
+            </div>
+            <div class="blog-cards">
+              Blog posts will be displayed here soon.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <div class="container">
+        <h2 class="section-title">LET'S CONNECT</h2>
+        <div class="footer-card">
+          <img src="/public/image/alim_4.png" alt="Contact Smile Img" />
+        </div>
+        <div class="social-links">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/alim-kakani-958284226/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a target="_blank" href="https://github.com/KakaniEmpires10"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/alim_kakani?igsh=MTN3ZmxkeW5mbnd2eg=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a target="_blank" href="mailto:muhammadalimkakani@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p>
+          &copy; <span id="year"></span> Muhammad Alim Kakani. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

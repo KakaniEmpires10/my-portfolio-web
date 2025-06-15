@@ -912,7 +912,48 @@ footer {
   transition: width 0.1s ease;
 }
 
-/* Desktop First - Media Queries */
+.blog {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-content {
+  margin-top: 150px;
+  display: grid;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.blog-text h1 {
+  font-size: var(--text-6xl);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.blog-text .subtitle {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+}
+
+.blog-cards {
+  width: 700px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 10px var(--bg-secondary);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1024px) {
   .skill-container {
     grid-template-columns: 1fr;

@@ -75,6 +75,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="public/style/style.css" as="style" />
+    <link rel="preload" href="public/js/main.js" as="script" />
     <link rel="preload" href="public/js/index.js" as="script" />
 
     <!-- Structured Data -->
@@ -140,6 +141,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
     ></script>
+    <script defer src="public/js/main.js"></script>
     <script defer src="public/js/tabs.js"></script>
     <script defer src="public/js/index.js"></script>
   </head>
@@ -159,7 +161,7 @@
             <a href="#works" aria-label="See my portfolio works">works</a>
           </li>
           <li><a href="#contact" aria-label="Contact me">contact</a></li>
-          <!-- <li><a href="/blog">blog</a></li> -->
+          <li><a href="/blog">blog</a></li>
         </ul>
         <div class="controls">
           <div class="color-picker">
@@ -197,7 +199,7 @@
     </header>
 
     <main role="main">
-      <section class="hero" id="home" aria-labelledby="hero-heading">
+      <section class="hero particles" id="home" aria-labelledby="hero-heading">
         <div class="container">
           <div class="hero-content">
             <div class="hero-text">

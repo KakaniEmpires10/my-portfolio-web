@@ -2,20 +2,25 @@ let swiper = null;
 
 // Swiper initialization
 function initSwiper() {
-  if (window.innerWidth <= 767) {
-    swiper = new Swiper(".skills-carousel", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+  if (window.innerWidth <= 767 && !swiper) {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+    script.onload = () => {
+      swiper = new Swiper(".skills-carousel", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    };
+    document.body.appendChild(script);
   }
 }
 

@@ -78,6 +78,36 @@
     <link rel="preload" href="../public/js/main.js" as="script" />
     <link rel="preload" href="../public/js/blog.js" as="script" />
 
+    <!-- Font Awesome preload -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- Google Fonts preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
@@ -104,23 +134,13 @@
       }
     </script>
 
-    <!-- icon -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
     <!-- css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../public/style/style.css" />
+    <link rel="stylesheet" href="/public/style/style.css" />
 
     <!-- js -->
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"
     ></script>
     <script defer src="../public/js/main.js"></script>
     <script defer src="../public/js/blog.js"></script>
@@ -132,7 +152,9 @@
 
     <header role="banner">
       <nav class="container" role="navigation" aria-label="Main navigation">
-        <div class="logo"><i class="fa-solid fa-microchip"></i>Alim</div>
+          <a href="/" class="logo" aria-label="Main Label & Go to home page">
+            <i class="fa-solid fa-microchip"></i>Alim
+          </a>
         <ul class="nav-links">
           <li><a href="/#home" aria-label="Go to home section">home</a></li>
           <li><a href="/#about" aria-label="Learn about me">about</a></li>
@@ -146,6 +168,7 @@
         <div class="controls">
           <div class="color-picker">
             <div
+              role="button"
               class="color-option color-1 active"
               data-primary="hsl(198.4, 93.2%, 59.6%)"
               data-secondary="hsl(142.1, 70.6%, 45.3%)"
@@ -153,6 +176,7 @@
               aria-label="Blue color theme"
             ></div>
             <div
+              role="button"
               class="color-option color-2"
               data-primary="hsl(142.1, 70.6%, 45.3%)"
               data-secondary="hsl(198.4, 93.2%, 59.6%)"
@@ -160,6 +184,7 @@
               aria-label="Green color theme"
             ></div>
             <div
+              role="button"
               class="color-option color-3"
               data-primary="hsl(349.7, 89.2%, 60.2%)"
               data-secondary="hsl(198.4, 93.2%, 59.6%)"
@@ -182,9 +207,7 @@
         <div class="container">
           <div class="blog-content">
             <div class="blog-text">
-              <h1 id="blog-heading">
-                Blogs
-              </h1>
+              <h1 id="blog-heading">Blogs</h1>
               <p class="subtitle">List of my Blogs</p>
             </div>
             <div class="blog-cards">
@@ -198,23 +221,41 @@
       <div class="container">
         <h2 class="section-title">LET'S CONNECT</h2>
         <div class="footer-card">
-          <img src="/public/image/alim_4.png" alt="Contact Smile Img" />
+          <picture>
+            <source srcset="/public/image/alim_4.webp" type="image/webp" />
+            <img
+              src="/public/image/alim_4.png"
+              alt="Contact Alim Smile Img"
+              width="1536"
+              height="1536"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
         <div class="social-links">
           <a
+            aria-label="LinkedIn profile of Muhammad Alim Kakani"
             target="_blank"
             href="https://www.linkedin.com/in/alim-kakani-958284226/"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <a target="_blank" href="https://github.com/KakaniEmpires10"
+          <a
+            aria-label="Github profile of Muhammad Alim Kakani"
+            target="_blank"
+            href="https://github.com/KakaniEmpires10"
             ><i class="fab fa-github"></i
           ></a>
           <a
+            aria-label="Instagram profile of Muhammad Alim Kakani"
             target="_blank"
             href="https://www.instagram.com/alim_kakani?igsh=MTN3ZmxkeW5mbnd2eg=="
             ><i class="fab fa-instagram"></i
           ></a>
-          <a target="_blank" href="mailto:muhammadalimkakani@gmail.com"
+          <a
+            aria-label="Send email to Muhammad Alim Kakani"
+            target="_blank"
+            href="mailto:muhammadalimkakani@gmail.com"
             ><i class="fas fa-envelope"></i
           ></a>
         </div>

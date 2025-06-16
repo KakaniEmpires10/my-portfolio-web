@@ -74,6 +74,13 @@
     />
 
     <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      as="image"
+      href="/public/image/alim_1.webp"
+      type="image/webp"
+    />
+
     <link rel="preload" href="public/style/style.css" as="style" />
     <link rel="preload" href="public/js/main.js" as="script" />
     <link rel="preload" href="public/js/index.js" as="script" />
@@ -123,14 +130,38 @@
       }
     </script>
 
-    <!-- icon -->
+    <!-- Font Awesome preload -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- Google Fonts preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- css -->
-    <link
+     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
@@ -139,7 +170,7 @@
     <!-- js -->
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"
     ></script>
     <script defer src="public/js/main.js"></script>
     <script defer src="public/js/tabs.js"></script>
@@ -166,6 +197,7 @@
         <div class="controls">
           <div class="color-picker">
             <div
+              role="button"
               class="color-option color-1 active"
               data-primary="hsl(198.4, 93.2%, 59.6%)"
               data-secondary="hsl(142.1, 70.6%, 45.3%)"
@@ -173,6 +205,7 @@
               aria-label="Blue color theme"
             ></div>
             <div
+              role="button"
               class="color-option color-2"
               data-primary="hsl(142.1, 70.6%, 45.3%)"
               data-secondary="hsl(198.4, 93.2%, 59.6%)"
@@ -180,6 +213,7 @@
               aria-label="Green color theme"
             ></div>
             <div
+              role="button"
               class="color-option color-3"
               data-primary="hsl(349.7, 89.2%, 60.2%)"
               data-secondary="hsl(198.4, 93.2%, 59.6%)"
@@ -209,16 +243,26 @@
               </h1>
               <p class="subtitle">Front-end Developer & UI Designer</p>
               <!-- <button class="cta-button">
-                <span>My Project</span>
+                <span>My Blogs</span>
                 <i class="fas fa-arrow-right"></i>
               </button> -->
             </div>
             <div class="hero-image">
               <div class="profile-pic">
-                <img
-                  src="/public/image/alim_1.png"
-                  alt="Muhammad Alim Kakani (animated) - Front-end Developer and UI Designer from Medan, Indonesia"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/alim_1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/public/image/alim_1.png"
+                    alt="Muhammad Alim Kakani (animated) - Front-end Developer and UI Designer from Medan, Indonesia"
+                    width="1024"
+                    height="1536"
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                </picture>
               </div>
               <div class="floating-card card-1">
                 <div class="btn-docs-container">
@@ -431,10 +475,17 @@
           <h2 class="section-title" id="skills-heading">MY SKILLS</h2>
           <div class="skill-container">
             <div class="experience-card">
-              <img
-                src="/public/image/alim_2.png"
-                alt="Muhammad Alim Kakani professional animated photo"
-              />
+              <picture>
+                <source srcset="/public/image/alim_2.webp" type="image/webp" />
+                <img
+                  src="/public/image/alim_2.png"
+                  alt="Muhammad Alim Kakani professional animated photo"
+                  width="1024"
+                  height="1536"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+              </picture>
               <div class="experience-number" id="experienceCounter">3</div>
               <div>Years<br />Working<br />Experience</div>
             </div>
@@ -705,12 +756,20 @@
                   Designed for ease of use and security, it integrates with
                   hospital systems to improve workflow.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="/public/image/works/app-registrasi.png"
-                  alt="Hospital Integrated Registration App interface showing patient registration form and dashboard"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/app-registrasi.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/app-registrasi.png"
+                    alt="Hospital Integrated Registration App interface showing patient registration form and dashboard"
+                    width="1889"
+                    height="984"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
 
@@ -742,12 +801,20 @@
                   efficient patient care through centralized access to
                   information.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="public/image/works/simrs.png"
-                  alt="Hospital Information System Web Application dashboard showing patient management interface"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/simrs.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/simrs.png"
+                    alt="Hospital Information System Web Application dashboard showing patient management interface"
+                    width="1889"
+                    height="985"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
 
@@ -776,12 +843,20 @@
                   youth development in Aceh. Features admin dashboard and public
                   landing page.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="public/image/works/gen-a.jpeg"
-                  alt="GEN-A organization management platform homepage"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/gen-a.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/gen-a.jpeg"
+                    alt="GEN-A organization management platform homepage"
+                    width="1890"
+                    height="1013"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
 
@@ -810,12 +885,20 @@
                   for USK's Bachelor of Nursing program, building custom pages
                   and improving site functionality.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="/public/image/works/skep-web.png"
-                  alt="USK Nursing Faculty Website homepage showing academic programs and information"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/skep-web.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/skep-web.png"
+                    alt="USK Nursing Faculty Website homepage showing academic programs and information"
+                    width="1887"
+                    height="1180"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
             <article class="accordion-panel">
@@ -845,12 +928,20 @@
                   providing comprehensive tuberculosis education and prevention
                   information for Indonesian audiences.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="/public/image/works/tbcare.jpeg"
-                  alt="TBCare tuberculosis awareness website homepage with educational content"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/tbcare.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/tbcare.jpeg"
+                    alt="TBCare tuberculosis awareness website homepage with educational content"
+                    width="1755"
+                    height="929"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
             <article class="accordion-panel">
@@ -879,12 +970,20 @@
                   with vanilla JavaScript as foundation for future Nuxt.js
                   implementation with role-based authentication.
                 </p>
-                <img
-                  class="accordion-image"
-                  src="/public/image/works/paperless-proto.jpeg"
-                  alt="PaperlessHospital website redesign homepage showing modern UI and healthcare AI features"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="/public/image/works/paperless-proto.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="accordion-image"
+                    src="/public/image/works/paperless-proto.jpeg"
+                    alt="PaperlessHospital website redesign homepage showing modern UI and healthcare AI features"
+                    width="1887"
+                    height="1646"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </article>
           </div>
@@ -896,23 +995,41 @@
       <div class="container">
         <h2 class="section-title">LET'S CONNECT</h2>
         <div class="footer-card">
-          <img src="/public/image/alim_4.png" alt="Contact Smile Img">
+          <picture>
+            <source srcset="/public/image/alim_4.webp" type="image/webp" />
+            <img
+              src="/public/image/alim_4.png"
+              alt="Contact Alim Smile Img"
+              width="1536"
+              height="1536"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
         <div class="social-links">
           <a
+            aria-label="LinkedIn profile of Muhammad Alim Kakani"
             target="_blank"
             href="https://www.linkedin.com/in/alim-kakani-958284226/"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <a target="_blank" href="https://github.com/KakaniEmpires10"
+          <a
+            aria-label="Github profile of Muhammad Alim Kakani"
+            target="_blank"
+            href="https://github.com/KakaniEmpires10"
             ><i class="fab fa-github"></i
           ></a>
           <a
+            aria-label="Instagram profile of Muhammad Alim Kakani"
             target="_blank"
             href="https://www.instagram.com/alim_kakani?igsh=MTN3ZmxkeW5mbnd2eg=="
             ><i class="fab fa-instagram"></i
           ></a>
-          <a target="_blank" href="mailto:muhammadalimkakani@gmail.com"
+          <a
+            aria-label="Send email to Muhammad Alim Kakani"
+            target="_blank"
+            href="mailto:muhammadalimkakani@gmail.com"
             ><i class="fas fa-envelope"></i
           ></a>
         </div>
